@@ -1,0 +1,4 @@
+name: find-santa
+version: 0.0.0
+libraryPathDependencies:
+  - codeql/java-all
