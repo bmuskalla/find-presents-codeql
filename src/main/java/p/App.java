@@ -12,7 +12,8 @@ public class App extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().write("Ho Ho Ho " + req.getParameter("name"));
+        GiftWrapper wrappedPresent = new SantasWrapperFactory().wrap(new JavaBook("Java Concurrency in Practice"));
+        resp.getWriter().println(wrappedPresent.unwrap().toString());
     }
 
 }
